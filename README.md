@@ -82,16 +82,16 @@ performance. For example, say you want to add something inside a `ul` in your
 DOM. Using `innerHTML` will work:
 
 ```js
-ul.innerHTML += '<li>A final list item</li>'
+ul.innerHTML += "<li>A final list item</li>";
 ```
 
 But this _rebuilds_ the entire DOM inside `div`. On the other hand, using
 `appendChild` would _not_ cause a rebuild:
 
 ```js
-let li = document.createElement('li')
-li.textContent = 'A final list item'
-ul.appendChild(li)
+let li = document.createElement("li");
+li.textContent = "A final list item";
+ul.appendChild(li);
 ```
 
 React's diffing algorithm is designed to identify changes between what the
@@ -126,4 +126,3 @@ Read more a more in-depth dive on these concepts [here][fiber].
 
 [reconciliation]: https://reactjs.org/docs/reconciliation.html
 [fiber]: https://medium.com/react-in-depth/inside-fiber-in-depth-overview-of-the-new-reconciliation-algorithm-in-react-e1c04700ef6e
-<p class='util--hide'>View <a href='https://learn.co/lessons/javascript-virtual-dom'>Virtual DOM</a> on Learn.co and start learning to code for free.</p>
