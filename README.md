@@ -85,7 +85,7 @@ DOM. Using `innerHTML` will work:
 ul.innerHTML += "<li>A final list item</li>";
 ```
 
-But this _rebuilds_ the entire DOM inside `div`. On the other hand, using
+But this _rebuilds_ the entire DOM inside `ul`. On the other hand, using
 `appendChild` would _not_ cause a rebuild:
 
 ```js
